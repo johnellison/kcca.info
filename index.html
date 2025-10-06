@@ -1,0 +1,801 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keep Custer County Affordable - Vote NO on Question 1A</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Montserrat', sans-serif;
+            line-height: 1.7;
+            color: #333;
+        }
+        
+        h1, h2, h3, .ballot-box h3, nav a {
+            font-family: 'Bebas Neue', sans-serif;
+            letter-spacing: 1px;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.55)),
+                        url('https://i.imgur.com/crbfswZ.jpeg') center/cover;
+            min-height: 600px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            position: relative;
+            padding: 20px;
+        }
+        
+        .hero-content {
+            max-width: 900px;
+            z-index: 2;
+            padding: 5rem 0;
+        }
+        
+        .hero h1 {
+            font-size: 4em;
+            font-weight: normal;
+            margin-bottom: 20px;
+            text-shadow: 3px 3px 6px rgba(0,0,0,0.7);
+            letter-spacing: 3px;
+            line-height: 1;
+        }
+        
+        .hero h2 {
+            font-size: 1.8em;
+            margin-bottom: 30px;
+            font-weight: normal;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+            font-family: 'Montserrat', sans-serif;
+            letter-spacing: 1px;
+        }
+        
+        .ballot-box {
+            background: rgba(220, 53, 69, 0.95);
+            padding: 15px 20px;
+            border-radius: 10px;
+            display: inline-block;
+            margin: 20px 0;
+            border: 3px solid white;
+        }
+        
+        .ballot-box h3 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            letter-spacing: 2px;
+            line-height: 1;
+            margin-top: 10px;
+        }
+        
+        .ballot-box p {
+            font-size: 1.2em;
+        }
+        
+        /* Donate Button in Hero */
+        .donate-btn {
+            display: inline-block;
+            background: #ffd93d;
+            color: #2c3e50;
+            padding: 15px 40px;
+            font-size: 1.2em;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 50px;
+            margin-top: 20px;
+            transition: all 0.3s;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+        }
+        
+        .donate-btn:hover {
+            background: #ffed4e;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.4);
+        }
+        
+        /* Navigation */
+        nav {
+            background: #2c3e50;
+            padding: 15px 0;
+            z-index: 100;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+        
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .mobile-menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.8em;
+            cursor: pointer;
+            padding: 10px;
+            margin-left: auto;
+        }
+
+        .mobile-menu-toggle span {
+            font-size: 1.4rem;
+            line-height: .9;
+            letter-spacing: 3px;
+        }
+        
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 35px;
+        }
+        
+        nav li {
+            position: relative;
+        }
+        
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.2em;
+            font-weight: normal;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            letter-spacing: 1.5px;
+            padding: 5px 10px;
+            border-bottom: 2px solid transparent;
+        }
+        
+        nav a:hover {
+            color: #ffd93d;
+            border-bottom: 2px solid #ffd93d;
+        }
+        
+        nav a::before {
+            content: '→';
+            font-size: 1.2em;
+            transition: transform 0.3s;
+        }
+        
+        nav a:hover::before {
+            transform: translateX(3px);
+        }
+        
+        .nav-icon {
+            font-size: 1.3em;
+        }
+        
+        /* Mobile Navigation */
+        @media (max-width: 768px) {
+            .mobile-menu-toggle {
+                display: block;
+            }
+            
+            nav ul {
+                display: none;
+                flex-direction: column;
+                gap: 0;
+                margin-top: 15px;
+            }
+            
+            nav ul.active {
+                display: flex;
+            }
+            
+            nav li {
+                width: 100%;
+                text-align: center;
+                border-bottom: 1px solid rgba(255,255,255,0.1);
+            }
+            
+            nav a {
+                padding: 15px;
+                justify-content: center;
+            }
+        }
+        
+        /* Content Sections */
+        section {
+            padding: 80px 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        section h2 {
+            font-size: 3.5em;
+            margin-bottom: 30px;
+            color: #2c3e50;
+            text-align: center;
+            border-bottom: 3px solid #e74c3c;
+            padding-bottom: 15px;
+            letter-spacing: 2px;
+            line-height: 1;
+        }
+        
+        .alternate {
+            background: #f8f9fa;
+        }
+        
+        /* Facts Grid */
+        .facts-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .fact-card {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            border-left: 5px solid #e74c3c;
+            transition: transform 0.3s;
+        }
+        
+        .fact-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+        }
+        
+        .fact-card h3 {
+            color: #e74c3c;
+            font-size: 1.8em;
+            margin-bottom: 15px;
+            letter-spacing: 2px;
+            line-height: 1;
+        }
+        
+        .fact-number {
+            font-size: 2.5em;
+            font-weight: bold;
+            color: #2c3e50;
+            display: block;
+            margin: 10px 0;
+            font-family: 'Bebas Neue', sans-serif;
+        }
+        
+        .fact-card a {
+            color: #2c3e50;
+            text-decoration: underline;
+        }
+        
+        .fact-card a:hover {
+            color: #e74c3c;
+        }
+        
+        /* Economic Impact */
+        .economic-impact {
+            background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
+            color: white;
+            padding: 50px;
+            border-radius: 15px;
+            text-align: center;
+            margin: 40px 0;
+        }
+        
+        .economic-impact h3 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            letter-spacing: 3px;
+            line-height: 1;
+        }
+        
+        .economic-impact .big-number {
+            font-size: 5em;
+            font-weight: normal;
+            color: #ffd93d;
+            margin: 20px 0;
+            font-family: 'Bebas Neue', sans-serif;
+            letter-spacing: 3px;
+        }
+        
+        /* Contact Form */
+        .contact-form {
+            max-width: 600px;
+            margin: 40px auto;
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: 600;
+            color: #2c3e50;
+        }
+        
+        .form-group input,
+        .form-group select {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #ddd;
+            border-radius: 5px;
+            font-size: 1em;
+            font-family: 'Montserrat', sans-serif;
+            transition: border-color 0.3s;
+        }
+        
+        .form-group input:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: #e74c3c;
+        }
+        
+        .checkbox-group {
+            margin: 20px 0;
+        }
+        
+        .checkbox-group label {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+            font-weight: normal;
+            cursor: pointer;
+        }
+        
+        .checkbox-group input[type="checkbox"] {
+            width: auto;
+            margin-right: 10px;
+            cursor: pointer;
+        }
+        
+        .submit-btn {
+            background: #27ae60;
+            color: white;
+            padding: 15px 40px;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.1em;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-family: 'Bebas Neue', sans-serif;
+            letter-spacing: 1px;
+        }
+        
+        .submit-btn:hover {
+            background: #229954;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+        }
+        
+        /* Call to Action */
+        .cta {
+            background: #27ae60;
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+        }
+        
+        .cta h2 {
+            color: white;
+            border: none;
+            font-size: 4em;
+            letter-spacing: 3px;
+        }
+        
+        .cta p {
+            font-size: 1.3em;
+            max-width: 800px;
+            margin: 20px auto;
+        }
+        
+        .cta a {
+            color: #ffd93d;
+        }
+        
+        /* Image Gallery */
+        .image-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin: 40px 0;
+        }
+        
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            height: 300px;
+        }
+        
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s;
+        }
+        
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+        
+        .gallery-caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(transparent, rgba(0,0,0,0.8));
+            color: white;
+            padding: 40px 20px 20px;
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 1.5em;
+            letter-spacing: 1px;
+        }
+        
+        .gallery-caption small {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.6em;
+            letter-spacing: 0;
+            display: block;
+            margin-top: 5px;
+        }
+        
+        /* Footer */
+        footer {
+            background: #2c3e50;
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+        }
+        
+        footer a {
+            color: #ffd93d;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5em;
+            }
+            
+            .hero h2 {
+                font-size: 1.3em;
+            }
+            
+            .ballot-box h3 {
+                font-size: 1.8em;
+                line-height: 1;
+                margin-bottom: 0;
+            }
+            
+            section h2 {
+                font-size: 2.5em;
+            }
+            
+            .gallery-item {
+                height: 250px;
+            }
+            
+            .contact-form {
+                padding: 20px;
+            }
+            
+            .economic-impact .big-number {
+                font-size: 3em;
+            }
+        }
+        
+        .source-note {
+            font-size: 0.9em;
+            color: #666;
+            font-style: italic;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <div class="hero">
+        <div class="hero-content">
+            <h1>KEEP CUSTER COUNTY AFFORDABLE</h1>
+            <h2>Preserve Our Economy. Protect Local Jobs.</h2>
+            <div class="ballot-box">
+                <h3>VOTE NO on Question 1A</h3>
+                <p>November 4, 2025</p>
+            </div>
+            <p style="font-size: 1.2em; max-width: 700px; margin: 20px auto;">
+                Don't vote to triple the lodging tax when tourism is already declining. Protect local businesses and workers by voting NO.
+            </p>
+            <a href="https://donate.stripe.com/test_your_link_here" class="donate-btn" target="_blank">💚 DONATE TO SUPPORT THIS CAMPAIGN</a>
+        </div>
+    </div>
+    
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <button class="mobile-menu-toggle" onclick="toggleMenu()"><span>MENU</span> ☰</button>
+            <ul id="navMenu">
+                <li><a href="#the-issue"><span class="nav-icon">📋</span> THE ISSUE</a></li>
+                <li><a href="#the-facts"><span class="nav-icon">📊</span> THE FACTS</a></li>
+                <li><a href="#economic-impact"><span class="nav-icon">💰</span> ECONOMIC IMPACT</a></li>
+                <li><a href="#our-valley"><span class="nav-icon">🏔️</span> OUR VALLEY</a></li>
+                <li><a href="#get-involved"><span class="nav-icon">✉️</span> GET INVOLVED</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+    <!-- The Issue Section -->
+    <section id="the-issue">
+        <h2>WHAT'S ON THE BALLOT?</h2>
+        <div style="max-width: 800px; margin: 0 auto; font-size: 1.1em;">
+            <p style="margin-bottom: 20px;">
+                <strong>Custer County Question 1A</strong> asks voters to <strong>increase the lodging tax 300%</strong> on all short-term rentals, motels, and RV parks in Custer County, Colorado.
+            </p>
+            <p style="margin-bottom: 20px;">
+                The tax would add <strong>4% more</strong> to every visitor's bill, bringing the total tax burden to nearly <strong>10% to visitors staying in Westcliffe and Silvercliffe</strong> when combined with state and local taxes.
+            </p>
+            <p style="margin-bottom: 20px;">
+                Proponents claim this will raise $170,000 annually for housing and childcare. But the real story is what it will <em>cost</em> our economy.
+            </p>
+            <p style="background: #fff3cd; padding: 20px; border-left: 5px solid #ffc107; border-radius: 5px;">
+                <strong>The Problem:</strong> This tax increase is bad timing. Tourism across Colorado is declining, and Custer County has been hit particularly hard with lodging revenue down 13% in 2024 and down another 7% in 2025.
+            </p>
+        </div>
+    </section>
+    
+    <!-- The Facts Section -->
+    <section id="the-facts" class="alternate">
+        <h2>THE FACTS DON'T LIE</h2>
+        <div class="facts-grid">
+            <div class="fact-card">
+                <h3>TOURISM IS DECLINING</h3>
+                <span class="fact-number">-13%</span>
+                <p>Custer County lodging revenue dropped 13% in 2024, followed by another 7% decline through August 2025. This is not the time to raise prices!</p>
+                <p class="source-note">Source: <a href="https://drive.proton.me/urls/PCR65CR7BM#bseTbtluZKkz">Treasurer Office, Custer County</a></p>
+            </div>
+            
+            <div class="fact-card">
+                <h3>COLORADO LOSING GROUND</h3>
+                <span class="fact-number">0.3%</span>
+                <p>Colorado tourism spending grew only 0.3% in 2024 compared to 4.2% nationally. We're already losing tourists to other states.</p>
+                <p class="source-note">Source: <a href="https://oedit.colorado.gov/press-release/tourism-industry-contributes-285-billion-to-colorado-economy-and-supports-over-188000" target="_blank">Colorado Tourism Office 2024</a></p>
+            </div>
+            
+            <div class="fact-card">
+                <h3>SHORT-TERM RENTALS DOWN</h3>
+                <span class="fact-number">-10%</span>
+                <p>Statewide short-term rental occupancy decreased 10% in early 2025. Higher taxes will only accelerate this decline.</p>
+                <p class="source-note">Source: <a href="https://oedit.colorado.gov/press-release/tourism-industry-contributes-285-billion-to-colorado-economy-and-supports-over-188000" target="_blank">Colorado Tourism Office</a></p>
+            </div>
+            
+            <div class="fact-card">
+                <h3>PRICE SENSITIVITY MATTERS</h3>
+                <span class="fact-number">1.5x</span>
+                <p>Economic research shows that for every 1% price increase, tourism demand drops by 1.5%. A 4% tax hike means 6% less visitors.</p>
+                <p class="source-note">Source: <a href="https://www.mdpi.com/2227-7099/10/1/1" target="_blank">Academic Tourism Studies</a></p>
+            </div>
+            
+            <div class="fact-card">
+                <h3>TAX BURDEN TOO HIGH</h3>
+                <span class="fact-number">~10%</span>
+                <p>Combined with state and local taxes, visitors in our towns already pay nearly 10% in taxes on accommodations.</p>
+                <p class="source-note">Source: County Tax Records</p>
+            </div>
+            
+            <div class="fact-card">
+                <h3>SEVEN COUNTIES MAKING MISTAKE</h3>
+                <span class="fact-number">7</span>
+                <p>Seven Colorado counties are tripling lodging taxes this November. This is our chance to be the smart, affordable alternative.</p>
+                <p class="source-note">Source: <a href="https://coloradosun.com/2025/09/15/counties-raising-lodging-taxes/" target="_blank">Colorado Sun</a></p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Economic Impact Section -->
+    <section id="economic-impact">
+        <h2>THE REAL ECONOMIC IMPACT</h2>
+        <div class="economic-impact">
+            <h3>ESTIMATED ANNUAL ECONOMIC LOSS</h3>
+            <div class="big-number">$1.5 MILLION</div>
+            <p style="font-size: 1.2em;">
+                While the county expects to collect $170,000 in new taxes, the economic ripple effect will cost our community an <strong>estimated $1.5 million in lost</strong> spending at restaurants, shops, gas stations, and services. Plus, the project loss in sales tax revenue will reduce the <strong>net tax gains to only $70,000</strong>!
+            </p>
+        </div>
+        
+        <div style="max-width: 800px; margin: 40px auto;">
+            <h3 style="font-size: 2em; margin-bottom: 20px; color: #2c3e50; font-family: 'Bebas Neue', sans-serif; letter-spacing: 1px;">HERE'S HOW THE MATH WORKS:</h3>
+            <p><strong>Context:</strong> Based on <a href="https://drive.proton.me/urls/PCR65CR7BM#bseTbtluZKkz">2024 loddging tax receipts</a> total lodging spending was $4.5M last year, with a total estimated tourism spending of $25M.</p> 
+            <div style="background: white; padding: 30px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+                <ol style="font-size: 1.1em; line-height: 2;">
+                    <li>Local ballot 1A proposes a <strong>4% tax increase</strong> on $4.5M in annual lodging spending</li>
+                    <li>This creates a <strong>6% reduction in demand</strong> (1.5% drop per 1% price increase based on <a href="https://www.mdpi.com/2227-7099/10/1/1" target="_blank">elasticity studies</a>)</li>
+                    <li>Which means <strong>$300,000 less</strong> in accommodation revenue</li>
+                    <li>Given a <strong>tourism spending multiplier of 5.6x</strong> on accommodation spending (<a href="https://drive.google.com/file/d/1CnXUA6K_MzQmq7mFTkI2Tm7EE6aSNoLl/view" target="_blank">Dean Runyan report</a>), this means $1.68M total economic impact</li>
+                    <li>Therefore, <strong>lost sales taxes</strong> reduce the net tax gain of the proposed bill to <strong>only $70,000</strong></li>
+                </ol>
+                <p style="margin-top: 20px; padding: 20px; background: #fff3cd; border-radius: 5px;">
+                    <strong>Bottom Line:</strong> Is $70,000 in net tax receipts (sales and lodging) worth losing $1.5 million in economic activity and putting local jobs at risk?
+                </p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Our Valley Section -->
+    <section id="our-valley" class="alternate">
+        <h2>PRESERVE WHAT MAKES OUR VALLEY SPECIAL</h2>
+        <p style="text-align: center; font-size: 1.2em; max-width: 900px; margin: 0 auto 40px; color: #555;">
+            Custer County is home to the stunning Sangre de Cristo Mountains, Colorado's first Dark Sky Community designation, and authentic Western heritage. Tourism brings $4.5 million annually to our economy and supports one-third of local jobs. Let's protect it.
+        </p>
+        
+        <div class="image-gallery">
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1519904981063-b0cf448d479e?w=800&q=80" alt="Sangre de Cristo Mountains">
+                <div class="gallery-caption">
+                    SANGRE DE CRISTO MOUNTAINS
+                    <small>Majestic peaks rising over a mile above the valley</small>
+                </div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1419242902214-272b3f66ee7a?w=800&q=80" alt="Dark Sky Stargazing">
+                <div class="gallery-caption">
+                    DARK SKY COMMUNITY
+                    <small>World-class stargazing at Smokey Jack Observatory</small>
+                </div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="https://i.imgur.com/EaFm8ls.jpeg" alt="Western Heritage">
+                <div class="gallery-caption">
+                    WESTERN HERITAGE
+                    <small>Historic ranching community since the 1850s</small>
+                </div>
+            </div>
+        </div>
+        
+        <div style="max-width: 900px; margin: 40px auto; font-size: 1.1em;">
+            <p style="margin-bottom: 20px;">
+                Families from Texas, Oklahoma, Kansas, and across the country choose Custer County because it's <strong>authentic, affordable, and accessible</strong>. They're not wealthy resort-goers—they're teachers, retirees, and working families on a budget. Discretionary travel decisions are <strong>highly price sensitive</strong>, especially during the off-season.
+            </p>
+            <p style="margin-bottom: 20px;">
+                These visitors support our restaurants, shops, gas stations, and services. They create jobs for our neighbors and help sustain our small-town economy.
+            </p>
+            <p style="background: #e8f5e9; padding: 20px; border-left: 5px solid #27ae60; border-radius: 5px;">
+                <strong>Let's be different:</strong> While other counties tax away their tourists, let's brand Custer County as the affordable, welcoming destination where families can still afford to vacation.
+            </p>
+        </div>
+    </section>
+    
+    <!-- Get Involved Section -->
+    <section id="get-involved" class="cta">
+        <h2>GET INVOLVED</h2>
+        <p>Help us defeat Question 1A and protect our local economy</p>
+        
+        <div class="contact-form">
+            <h3 style="font-size: 2em; margin-bottom: 20px; color: #2c3e50; font-family: 'Bebas Neue', sans-serif; letter-spacing: 1px; text-align: center;">JOIN OUR CAMPAIGN</h3>
+            
+            <form action="https://formspree.io/f/xldplnka" method="POST">
+                <div class="form-group">
+                    <label for="name">Full Name *</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email Address *</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone">
+                </div>
+                
+                <div class="form-group">
+                    <label for="address">Mailing Address</label>
+                    <input type="text" id="address" name="address">
+                </div>
+                
+                <div class="form-group">
+                    <label for="employment">Employment Status</label>
+                    <select id="employment" name="employment">
+                        <option value="">Select...</option>
+                        <option value="tourism">Tourism Industry</option>
+                        <option value="business-owner">Business Owner</option>
+                        <option value="employee">Employee</option>
+                        <option value="retired">Retired</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                
+                <div class="checkbox-group">
+                    <p style="font-weight: 600; color: #2c3e50; margin-bottom: 10px;">Request Campaign Materials:</p>
+                    <label style="color: #2c3e50;">
+                        <input type="checkbox" name="yard-sign" value="yes" >
+                        Send me a yard sign
+                    </label>
+                    <label style="color: #2c3e50;"">
+                        <input type="checkbox" name="poster" value="yes">
+                        Send me posters
+                    </label>
+                </div>
+                <p style="font-size: 0.9em; color: #666; margin-bottom: 15px;">
+                    By submitting this form, you agree to receive campaign updates 
+                    from Keep Custer County Affordable. We will not share your 
+                    information with third parties.
+                </p>
+                <div style="text-align: center;">
+                    <button type="submit" class="submit-btn">SUBMIT</button>
+                </div>
+            </form>
+        </div>
+        
+        <div style="max-width: 800px; margin: 40px auto; background: rgba(255,255,255,0.1); padding: 30px; border-radius: 10px;">
+            <h3 style="font-size: 2.2em; margin-bottom: 20px; font-family: 'Bebas Neue', sans-serif; letter-spacing: 2px;">OTHER WAYS TO HELP</h3>
+            <ul style="list-style: none; font-size: 1.1em; text-align: left;">
+                <li style="margin-bottom: 15px;">✓ <strong>Vote NO</strong> on Question 1A on November 4th</li>
+                <li style="margin-bottom: 15px;">✓ <strong>Talk to your neighbors</strong> about the economic impact</li>
+                <li style="margin-bottom: 15px;">✓ <strong>Share this website</strong> with other business owners and concerned citizens</li>
+                <li style="margin-bottom: 15px;">✓ <strong>Pick up materials</strong> at Antler's Liquor in Westcliffe</li>
+                <li style="margin-bottom: 15px;">✓ <strong>Write a letter</strong> to the <a href="https://sangredecristosentinel.com/">Sangre de Cristo Sentinel</a> or <a href="https://wetmountaintribune.com/">Wet Mountain Tribune</a></li>
+                <li style="margin-bottom: 15px;">✓ <strong>Donate</strong> to help us spread the word and cover campaign costs</li>
+            </ul>
+        </div>
+        
+        <p style="font-size: 1.3em; margin-top: 30px;">
+            Questions? Contact us at: <a href="mailto:hello@kcca.info">hello@kcca.info</a>
+        </p>
+    </section>
+    
+    <!-- Footer -->
+    <footer>
+        <p style="font-size: 1.1em; margin-bottom: 20px;">
+            <strong>Keep Custer County Affordable</strong><br>
+            A coalition of local business owners, tourism workers, and concerned citizens
+        </p>
+        <p style="margin-bottom: 10px;">
+            Paid for by Keep Custer County Affordable, Treasurer Peggi Collins
+        </p>
+        <p style="font-size: 0.9em; color: #bbb; margin-bottom: 20px;">
+            This website is not affiliated with any candidate or political party. We are a grassroots group of Custer County residents concerned about the economic impact of tripling the lodging tax.
+        </p>
+        <p style="font-size: 0.9em;">
+            <a href="https://drive.proton.me/urls/PCR65CR7BM#bseTbtluZKkz">Custer County Lodging Tax Revenue</a> |
+            <a href="https://oedit.colorado.gov/tourism-research" target="_blank">Colorado Tourism Data</a> | 
+            <a href="https://coloradosun.com/2025/09/15/counties-raising-lodging-taxes/" target="_blank">Seven Counties Analysis</a> | 
+            <a href="https://industry.colorado.com/sites/default/files/COImp20-%20with%20National.pdf" target="_blank">Economic Impact Report</a>
+        </p>
+    </footer>
+    
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('navMenu');
+            menu.classList.toggle('active');
+        }
+        
+        // Close menu when clicking on a link
+        document.querySelectorAll('nav a').forEach(link => {
+            link.addEventListener('click', () => {
+                const menu = document.getElementById('navMenu');
+                if (window.innerWidth <= 768) {
+                    menu.classList.remove('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
