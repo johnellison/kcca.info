@@ -722,6 +722,10 @@
                         <option value="other">Other</option>
                     </select>
                 </div>
+                <div class="form-group" id="employer-group" style="display: none;">
+                    <label for="employer">Employer Name *</label>
+                    <input type="text" id="employer" name="employer">
+                </div>
                 
                 <div class="checkbox-group">
                     <p style="font-weight: 600; color: #2c3e50; margin-bottom: 10px;">Request Campaign Materials:</p>
@@ -796,6 +800,28 @@
                     menu.classList.remove('active');
                 }
             });
+        });
+        
+        // Show/hide Employer Name based on Employment Status
+        document.addEventListener('DOMContentLoaded', () => {
+            const employmentSelect = document.getElementById('employment');
+            const employerGroup = document.getElementById('employer-group');
+            const employerInput = document.getElementById('employer');
+            const showValues = ['tourism', 'business-owner', 'employee'];
+
+            function updateEmployerVisibility() {
+                if (showValues.includes(employmentSelect.value)) {
+                    employerGroup.style.display = 'block';
+                    employerInput.required = true;
+                } else {
+                    employerGroup.style.display = 'none';
+                    employerInput.required = false;
+                    employerInput.value = '';
+                }
+            }
+
+            employmentSelect.addEventListener('change', updateEmployerVisibility);
+            updateEmployerVisibility();
         });
     </script>
 </body>
