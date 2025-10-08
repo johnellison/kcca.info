@@ -7,7 +7,16 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://geo.dailymotion.com">
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Preload critical font files -->
+    <link rel="preload" href="https://fonts.gstatic.com/s/bebasneue/v14/JTUSjIg69CK48gW7PXooxW4.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="https://fonts.gstatic.com/s/montserrat/v26/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCtr6Hw5aXpsog.woff2" as="font" type="font/woff2" crossorigin>
+    
+    <!-- Defer Google Fonts stylesheet to avoid render blocking -->
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript>
+        <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    </noscript>
     <style>
         * {
             margin: 0;
@@ -16,13 +25,13 @@
         }
         
         body {
-            font-family: 'Montserrat', sans-serif;
+            font-family: 'Montserrat', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
             line-height: 1.7;
             color: #333;
         }
         
         h1, h2, h3, .ballot-box h3, nav a {
-            font-family: 'Bebas Neue', sans-serif;
+            font-family: 'Bebas Neue', 'Arial Black', Impact, 'Franklin Gothic Bold', sans-serif;
             letter-spacing: 1px;
         }
         
@@ -66,7 +75,7 @@
             margin-bottom: 30px;
             font-weight: normal;
             text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
-            font-family: 'Montserrat', sans-serif;
+            font-family: 'Montserrat', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
             letter-spacing: 1px;
         }
         
@@ -275,7 +284,7 @@
             color: #2c3e50;
             display: block;
             margin: 10px 0;
-            font-family: 'Bebas Neue', sans-serif;
+            font-family: 'Bebas Neue', 'Arial Black', Impact, 'Franklin Gothic Bold', sans-serif;
         }
         
         .fact-card a {
@@ -309,7 +318,7 @@
             font-weight: normal;
             color: #ffd93d;
             margin: 20px 0;
-            font-family: 'Bebas Neue', sans-serif;
+            font-family: 'Bebas Neue', 'Arial Black', Impact, 'Franklin Gothic Bold', sans-serif;
             letter-spacing: 3px;
         }
         
@@ -341,7 +350,7 @@
             border: 2px solid #ddd;
             border-radius: 5px;
             font-size: 1em;
-            font-family: 'Montserrat', sans-serif;
+            font-family: 'Montserrat', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
             transition: border-color 0.3s;
         }
         
@@ -379,7 +388,7 @@
             font-weight: bold;
             cursor: pointer;
             transition: all 0.3s;
-            font-family: 'Bebas Neue', sans-serif;
+            font-family: 'Bebas Neue', 'Arial Black', Impact, 'Franklin Gothic Bold', sans-serif;
             letter-spacing: 1px;
         }
         
@@ -449,13 +458,13 @@
             background: linear-gradient(transparent, rgba(0,0,0,0.8));
             color: white;
             padding: 40px 20px 20px;
-            font-family: 'Bebas Neue', sans-serif;
+            font-family: 'Bebas Neue', 'Arial Black', Impact, 'Franklin Gothic Bold', sans-serif;
             font-size: 1.5em;
             letter-spacing: 1px;
         }
         
         .gallery-caption small {
-            font-family: 'Montserrat', sans-serif;
+            font-family: 'Montserrat', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
             font-size: 0.6em;
             letter-spacing: 0;
             display: block;
@@ -631,7 +640,7 @@
         </div>
         
         <div style="max-width: 800px; margin: 40px auto;">
-            <h3 style="font-size: 2em; margin-bottom: 20px; color: #2c3e50; font-family: 'Bebas Neue', sans-serif; letter-spacing: 1px;">HERE'S HOW THE MATH WORKS:</h3>
+            <h3 style="font-size: 2em; margin-bottom: 20px; color: #2c3e50; font-family: 'Bebas Neue', 'Arial Black', Impact, 'Franklin Gothic Bold', sans-serif; letter-spacing: 1px;">HERE'S HOW THE MATH WORKS:</h3>
             <p><strong>Context:</strong> Based on <a href="https://drive.proton.me/urls/PCR65CR7BM#bseTbtluZKkz">2024 loddging tax receipts</a> total lodging spending was $4.5M last year, with a total estimated tourism spending of $25M.</p> 
             <div style="background: white; padding: 30px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
                 <ol style="font-size: 1.1em; line-height: 2;">
@@ -700,7 +709,7 @@
         <p>Help us defeat Question 1A and protect our local economy</p>
         
         <div class="contact-form">
-            <h3 style="font-size: 2em; margin-bottom: 20px; color: #2c3e50; font-family: 'Bebas Neue', sans-serif; letter-spacing: 1px; text-align: center;">JOIN OUR CAMPAIGN</h3>
+            <h3 style="font-size: 2em; margin-bottom: 20px; color: #2c3e50; font-family: 'Bebas Neue', 'Arial Black', Impact, 'Franklin Gothic Bold', sans-serif; letter-spacing: 1px; text-align: center;">JOIN OUR CAMPAIGN</h3>
             
             <form action="https://formspree.io/f/xldplnka" method="POST">
                 <div class="form-group">
@@ -762,7 +771,7 @@
         </div>
         
         <div style="max-width: 800px; margin: 40px auto; background: rgba(255,255,255,0.1); padding: 30px; border-radius: 10px;">
-            <h3 style="font-size: 2.2em; margin-bottom: 20px; font-family: 'Bebas Neue', sans-serif; letter-spacing: 2px;">OTHER WAYS TO HELP</h3>
+            <h3 style="font-size: 2.2em; margin-bottom: 20px; font-family: 'Bebas Neue', 'Arial Black', Impact, 'Franklin Gothic Bold', sans-serif; letter-spacing: 2px;">OTHER WAYS TO HELP</h3>
             <ul style="list-style: none; font-size: 1.1em; text-align: left;">
                 <li style="margin-bottom: 15px;">✓ <strong>Vote NO</strong> on Question 1A on November 4th</li>
                 <li style="margin-bottom: 15px;">✓ <strong>Talk to your neighbors</strong> about the economic impact</li>
