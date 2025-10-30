@@ -1,0 +1,10 @@
+# robots.txt for kcca.info
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://kcca.info/sitemap.xml
+
+# Crawl-delay for politeness
+Crawl-delay: 1

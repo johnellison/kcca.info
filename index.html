@@ -4,10 +4,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Keep Custer County Affordable - Vote NO on Question 1A</title>
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Vote NO on Custer County Question 1A. Tripling the lodging tax during Colorado's tourism crisis would devastate our local economy. Protect jobs and keep our county affordable.">
+    <meta name="keywords" content="Custer County, Question 1A, lodging tax, tourism, Westcliffe, Colorado, vote no">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://kcca.info/">
+    <meta property="og:title" content="Keep Custer County Affordable - Vote NO on Question 1A">
+    <meta property="og:description" content="Tripling the lodging tax would devastate Custer County's economy. Vote NO on Question 1A to protect local businesses and jobs.">
+    <meta property="og:image" content="https://kcca.info/images/westcliffe-mountains-pablo.webp">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://kcca.info/">
+    <meta property="twitter:title" content="Keep Custer County Affordable - Vote NO on Question 1A">
+    <meta property="twitter:description" content="Tripling the lodging tax would devastate Custer County's economy. Vote NO on Question 1A to protect local businesses and jobs.">
+    <meta property="twitter:image" content="https://kcca.info/images/westcliffe-mountains-pablo.webp">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://kcca.info/">
+
+    <!-- Mobile Safari Optimization -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Vote NO on 1A">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://geo.dailymotion.com">
-    
+    <link rel="preconnect" href="https://www.youtube.com">
+    <link rel="preconnect" href="https://i.ytimg.com">
+
     <!-- Preload critical font files -->
     <link rel="preload" href="https://fonts.gstatic.com/s/bebasneue/v14/JTUSjIg69CK48gW7PXooxW4.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="https://fonts.gstatic.com/s/montserrat/v26/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCtr6Hw5aXpsog.woff2" as="font" type="font/woff2" crossorigin>
@@ -39,7 +68,7 @@
         .hero {
             background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.55)),
                         url('images/westcliffe-mountains-pablox600.webp') center/cover;
-            min-height: 600px;
+            min-height: 100vh;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -58,34 +87,96 @@
         .hero-content {
             max-width: 900px;
             z-index: 2;
-            padding: 5rem 0;
+            padding: 3rem 0;
         }
-        
+
+        /* Hero loading animations */
         .hero h1 {
-            font-size: 4em;
+            font-size: 5.5em;
             font-weight: normal;
-            margin-bottom: 20px;
+            margin-bottom: 15px;
             text-shadow: 3px 3px 6px rgba(0,0,0,0.7);
             letter-spacing: 3px;
-            line-height: 1;
+            line-height: 1.05;
+            opacity: 0;
+            transform: translateY(30px);
+            animation: heroFadeIn 1s ease-out 0.2s forwards;
         }
-        
+
         .hero h2 {
-            font-size: 1.8em;
-            margin-bottom: 30px;
+            font-size: 2.3em;
+            margin-bottom: 25px;
             font-weight: normal;
             text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
             font-family: 'Montserrat', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
             letter-spacing: 1px;
+            opacity: 0;
+            transform: translateY(30px);
+            animation: heroFadeIn 1s ease-out 0.5s forwards;
         }
-        
+
+        #video-container {
+            opacity: 0;
+            transform: translateY(30px) scale(0.95);
+            animation: heroVideoFadeIn 1s ease-out 0.8s forwards;
+            max-width: 500px;
+            margin: 0 auto 15px;
+            aspect-ratio: 16 / 9;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+        }
+
         .ballot-box {
             background: rgba(220, 53, 69, 0.95);
             padding: 15px 20px;
             border-radius: 10px;
             display: inline-block;
-            margin: 20px 0;
+            margin: 10px 0 15px 0;
             border: 3px solid white;
+            opacity: 0;
+            transform: translateY(30px);
+            animation: heroFadeIn 1s ease-out 1.1s forwards;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+        }
+
+        .hero-content > p {
+            opacity: 0;
+            transform: translateY(20px);
+            animation: heroFadeIn 0.8s ease-out 1.4s forwards;
+            font-size: 1.15em;
+            line-height: 1.6;
+            background: rgba(0, 0, 0, 0.5);
+            padding: 20px 30px;
+            border-radius: 10px;
+            backdrop-filter: blur(8px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        .hero-content .donate-btn {
+            opacity: 0;
+            transform: translateY(20px);
+            animation: heroFadeIn 0.8s ease-out 1.7s forwards;
+        }
+
+        @keyframes heroFadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes heroVideoFadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(30px) scale(0.95);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
         }
         
         .ballot-box h3 {
@@ -109,16 +200,16 @@
             font-size: 1.2em;
             font-weight: bold;
             text-decoration: none;
-            border-radius: 50px;
-            margin-top: 20px;
+            border-radius: 10px;
+            margin-top: 15px;
             transition: all 0.3s;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
         }
         
         .donate-btn:hover {
             background: #ffed4e;
             transform: translateY(-2px);
-            box-shadow: 0 6px 12px rgba(0,0,0,0.4);
+            box-shadow: 0 12px 32px rgba(0,0,0,0.4);
         }
         
         /* Navigation */
@@ -130,7 +221,7 @@
         }
         
         .nav-container {
-            max-width: 1200px;
+            max-width: 1400px;
             margin: 0 auto;
             padding: 0 20px;
         }
@@ -228,32 +319,46 @@
         
         /* Content Sections */
         section {
-            padding: 80px 40px;
-            max-width: 1200px;
+            padding: 120px 40px;
+            max-width: 1280px;
             margin: 0 auto;
+            position: relative;
         }
-        
+
         section h2 {
             font-size: 3.5em;
-            margin-bottom: 30px;
+            margin-bottom: 50px;
             color: #2c3e50;
             text-align: center;
             border-bottom: 3px solid #e74c3c;
-            padding-bottom: 15px;
+            padding-bottom: 20px;
             letter-spacing: 2px;
             line-height: 1;
         }
-        
+
+        /* Full-width background for alternate sections */
         .alternate {
+            background: transparent;
+        }
+
+        .alternate::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100vw;
+            height: 100%;
             background: #f8f9fa;
+            z-index: -1;
         }
         
         /* Facts Grid */
         .facts-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 30px;
-            margin-top: 40px;
+            gap: 35px;
+            margin-top: 50px;
         }
         
         .fact-card {
@@ -300,10 +405,10 @@
         .economic-impact {
             background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
             color: white;
-            padding: 50px;
+            padding: 60px;
             border-radius: 15px;
             text-align: center;
-            margin: 40px 0;
+            margin: 60px 0;
         }
         
         .economic-impact h3 {
@@ -383,7 +488,7 @@
             color: white;
             padding: 15px 40px;
             border: none;
-            border-radius: 50px;
+            border-radius: 10px;
             font-size: 1.1em;
             font-weight: bold;
             cursor: pointer;
@@ -400,10 +505,23 @@
         
         /* Call to Action */
         .cta {
-            background: #27ae60;
+            background: transparent;
             color: white;
-            padding: 60px 20px;
+            padding: 120px 40px;
             text-align: center;
+            position: relative;
+        }
+
+        .cta::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100vw;
+            height: 100%;
+            background: #27ae60;
+            z-index: -1;
         }
         
         .cta h2 {
@@ -427,8 +545,8 @@
         .image-gallery {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
-            margin: 40px 0;
+            gap: 30px;
+            margin: 50px 0;
         }
         
         .gallery-item {
@@ -483,34 +601,85 @@
             color: #ffd93d;
         }
         
-        /* Responsive */
-        @media (max-width: 768px) {
+        /* Accessibility: Respect reduced motion preference */
+        @media (prefers-reduced-motion: reduce) {
+            .hero h1,
+            .hero h2,
+            #video-container,
+            .ballot-box,
+            .hero-content > p,
+            .hero-content .donate-btn,
+            section,
+            .fact-card,
+            .gallery-item,
+            .economic-impact,
+            .media-card {
+                animation: none !important;
+                transition: none !important;
+                opacity: 1 !important;
+                transform: none !important;
+            }
+        }
+
+        /* Responsive - Tablet */
+        @media (max-width: 1024px) {
             .hero h1 {
-                font-size: 2.5em;
+                font-size: 4.5em;
             }
-            
+
             .hero h2 {
-                font-size: 1.3em;
+                font-size: 2em;
             }
-            
+        }
+
+        /* Responsive - Mobile */
+        @media (max-width: 768px) {
+            section {
+                padding: 80px 25px;
+            }
+
+            section h2 {
+                font-size: 2.5em;
+                margin-bottom: 35px;
+            }
+
+            .cta {
+                padding: 80px 25px;
+            }
+
+            .hero h1 {
+                font-size: 3em;
+                margin-bottom: 12px;
+            }
+
+            .hero h2 {
+                font-size: 1.6em;
+                margin-bottom: 20px;
+            }
+
+            .hero-content > p {
+                font-size: 1.05em;
+                padding: 15px 20px;
+            }
+
+            #video-container {
+                max-width: 100%;
+            }
+
             .ballot-box h3 {
                 font-size: 1.8em;
                 line-height: 1;
                 margin-bottom: 0;
             }
-            
-            section h2 {
-                font-size: 2.5em;
-            }
-            
+
             .gallery-item {
                 height: 250px;
             }
-            
+
             .contact-form {
                 padding: 20px;
             }
-            
+
             .economic-impact .big-number {
                 font-size: 3em;
             }
@@ -522,7 +691,343 @@
             font-style: italic;
             margin-top: 10px;
         }
+
+        /* Media Grid */
+        .media-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 35px;
+            margin: 50px 0 0 0;
+        }
+
+        /* Featured Media Card - spans 2 columns on larger screens */
+        .media-card.featured {
+            grid-column: span 2;
+        }
+
+        @media (max-width: 768px) {
+            .media-card.featured {
+                grid-column: span 1;
+            }
+        }
+
+        /* Video play icon overlay */
+        .video-thumbnail {
+            position: relative;
+        }
+
+        .video-play-overlay {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: rgba(0,0,0,0.7);
+            border-radius: 50%;
+            width: 80px;
+            height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s;
+            cursor: pointer;
+            text-decoration: none;
+            z-index: 10;
+        }
+
+        .video-play-overlay::before {
+            content: '';
+            width: 0;
+            height: 0;
+            border-left: 25px solid white;
+            border-top: 15px solid transparent;
+            border-bottom: 15px solid transparent;
+            margin-left: 5px;
+        }
+
+        .video-play-overlay:hover {
+            background: rgba(0,0,0,0.9);
+            transform: translate(-50%, -50%) scale(1.1);
+        }
+
+        /* Media Conclusion */
+        .media-conclusion {
+            max-width: 900px;
+            margin: 70px auto 0;
+            padding: 50px 60px;
+            background: white;
+            color: #2c3e50;
+            border-radius: 15px;
+            border: 4px solid #e74c3c;
+            box-shadow: 0 8px 32px rgba(231, 76, 60, 0.15);
+        }
+
+        .media-conclusion h3 {
+            font-family: 'Bebas Neue', 'Arial Black', Impact, 'Franklin Gothic Bold', sans-serif;
+            font-size: 2.5em;
+            margin-bottom: 25px;
+            letter-spacing: 2px;
+            line-height: 1.2;
+            text-align: center;
+            color: #e74c3c;
+        }
+
+        .media-conclusion-content {
+            text-align: left;
+        }
+
+        .media-conclusion p {
+            font-size: 1.15em;
+            line-height: 1.8;
+            margin-bottom: 12px;
+        }
+
+        .media-conclusion .highlight {
+            font-size: 1.4em;
+            font-weight: 700;
+            color: #e74c3c;
+            display: block;
+            margin: 20px 0;
+            text-align: center;
+            padding: 15px;
+            background: #fff3cd;
+            border-radius: 10px;
+            border: 2px solid #ffd93d;
+        }
+
+        .media-conclusion ul {
+            list-style: none;
+            margin: 15px 0;
+            padding: 0;
+        }
+
+        .media-conclusion ul li {
+            font-size: 1.15em;
+            line-height: 1.8;
+            margin-bottom: 12px;
+            padding-left: 35px;
+            position: relative;
+        }
+
+        .media-conclusion ul li::before {
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+            font-size: 1.3em;
+        }
+
+        .media-conclusion .declining li::before {
+            content: '✗';
+            color: #e74c3c;
+        }
+
+        .media-conclusion .opportunity li::before {
+            content: '✓';
+            color: #27ae60;
+        }
+
+        @media (max-width: 768px) {
+            .media-conclusion {
+                padding: 30px 25px;
+            }
+        }
+        .media-card {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            background: #fff;
+            border-radius: 13px;
+            overflow: hidden;
+            box-shadow: 0 4px 16px rgba(44,62,80,0.11);
+            transition: transform 0.18s, box-shadow 0.18s;
+            text-decoration: none;
+            color: inherit;
+            min-height: 420px;
+            height: 100%;
+            opacity: 0;
+            transform: translateY(16px);
+            /* Will fade in via JS */
+        }
+        .fade-in {
+            animation: mediaFadeIn 1.17s cubic-bezier(.26,.77,.62,1.14) forwards;
+        }
+        @keyframes mediaFadeIn {
+            from { opacity: 0; transform: translateY(16px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Scroll-triggered fade-in animations for sections */
+        section {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+
+        section.fade-in-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .fact-card, .gallery-item {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+
+        .fact-card.fade-in-visible, .gallery-item.fade-in-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .economic-impact {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+
+        .economic-impact.fade-in-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .media-card img {
+            width: 100%;
+            aspect-ratio: 16 / 9;
+            height: auto;
+            object-fit: cover;
+            display: block;
+        }
+        .media-caption {
+            padding: 18px 20px 24px 20px;
+            font-size: 1em;
+            display: flex;
+            flex-direction: column;
+            flex: 1 1 auto;
+            gap: 8px;
+        }
+        .media-title {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.25em;
+            font-weight: 700;
+            letter-spacing: 0;
+            color: #2c3e50;
+            margin: 0 0 4px 0;
+            padding-left: 0;
+            line-height: 1.3;
+        }
+        .media-title a {
+            color: #2c3e50;
+            text-decoration: none;
+        }
+        .media-title a:hover {
+            text-decoration: underline;
+            color: #e74c3c;
+        }
+        .media-date {
+            font-size: 0.85em;
+            color: #666;
+            opacity: 1;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            margin-bottom: 4px;
+            text-transform: none;
+        }
+        .media-findings {
+            margin-left: 0;
+            padding-left: 18px;
+            margin: 0 0 8px 0;
+        }
+        .media-findings li {
+            margin-bottom: 6px;
+            color: #555;
+            font-size: 0.92em;
+            line-height: 1.5;
+        }
+        .media-critical-quote {
+            background: #f7f9fb;
+            border-left: 3px solid #dbe5ef;
+            padding: 10px 14px;
+            color: #444;
+            font-style: italic;
+            margin-top: 6px;
+            font-size: 0.9em;
+            line-height: 1.45;
+        }
+        .media-actions {
+            margin-top: auto;
+            /* pins button to bottom edge inside .media-caption */
+        }
+        .btn-secondary {
+            display: block;
+            width: 100%;
+            text-align: center;
+            background: #ffffff;
+            color: #2c3e50;
+            border: 2px solid #2c3e50;
+            border-radius: 13px;
+            padding: 10px 0;
+            font-family: 'Montserrat', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
+            font-weight: 600;
+            font-size: 1em;
+            text-decoration: none;
+            transition: background 0.2s, color 0.2s, transform 0.2s;
+            margin-top: 8px;
+            box-sizing: border-box;
+        }
+        .btn-secondary:hover {
+            background: #2c3e50;
+            color: #ffffff;
+            transform: translateY(-1px);
+        }
     </style>
+
+    <!-- Structured Data (Schema.org) -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Keep Custer County Affordable",
+        "url": "https://kcca.info",
+        "logo": "https://kcca.info/images/westcliffe-mountains-pablo.webp",
+        "description": "A coalition of local business owners, tourism workers, and concerned citizens opposing Question 1A",
+        "foundingDate": "2025",
+        "areaServed": {
+            "@type": "Place",
+            "name": "Custer County, Colorado"
+        },
+        "sameAs": [],
+        "parentOrganization": {
+            "@type": "Place",
+            "name": "Custer County, Colorado",
+            "geo": {
+                "@type": "GeoCoordinates",
+                "latitude": "38.1458",
+                "longitude": "-105.4658"
+            }
+        }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Keep Custer County Affordable - Vote NO on Question 1A",
+        "description": "Tripling the lodging tax during Colorado's tourism crisis would devastate Custer County's economy. Vote NO on Question 1A to protect local businesses and jobs.",
+        "image": "https://kcca.info/images/westcliffe-mountains-pablo.webp",
+        "datePublished": "2025-10-01",
+        "dateModified": "2025-10-30",
+        "author": {
+            "@type": "Organization",
+            "name": "Keep Custer County Affordable"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "Keep Custer County Affordable",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://kcca.info/images/westcliffe-mountains-pablo.webp"
+            }
+        }
+    }
+    </script>
 </head>
 <body>
     <!-- Hero Section -->
@@ -530,7 +1035,7 @@
         <div class="hero-content">
             <h1>KEEP CUSTER COUNTY AFFORDABLE</h1>
             <h2>Preserve Our Economy. Protect Local Jobs.</h2>
-            <div id="video-container" style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;margin-bottom:20px;cursor:pointer;" onclick="loadVideo()">
+            <div id="video-container" style="position:relative;overflow:hidden;cursor:pointer;width:100%;" onclick="loadVideo()">
                 <img id="video-facade" src="images/kcca-video-facade.webp" alt="Video: Keep Custer County Affordable" style="width:100%; height:100%; position:absolute; left:0px; top:0px; object-fit:cover;">
                 <div id="play-button" style="position:absolute; top:50%; left:50%; transform:translate(-50%, -50%); background:rgba(0,0,0,0.7); border-radius:50%; width:80px; height:80px; display:flex; align-items:center; justify-content:center; transition:all 0.3s;">
                     <div style="width:0; height:0; border-left:25px solid white; border-top:15px solid transparent; border-bottom:15px solid transparent; margin-left:5px;"></div>
@@ -541,7 +1046,7 @@
                 <p>November 4, 2025</p>
             </div>
             <p style="font-size: 1.2em; max-width: 700px; margin: 20px auto;">
-                Don't vote to triple the lodging tax when tourism is already declining. Protect local businesses and workers by voting NO.
+                Tripling the lodging tax during Colorado's worst tourism crisis in years would devastate Custer County's economy. Protect local businesses and workers by voting NO.
             </p>
           <a href="https://buy.stripe.com/9B69AM9do9Fg0Uee85f3a01" class="donate-btn" target="_blank">💚 DONATE TO SUPPORT THIS CAMPAIGN</a>
         </div>
@@ -556,6 +1061,7 @@
                 <li><a href="#the-facts"><span class="nav-icon">📊</span> THE FACTS</a></li>
                 <li><a href="#economic-impact"><span class="nav-icon">💰</span> ECONOMIC IMPACT</a></li>
                 <li><a href="#our-valley"><span class="nav-icon">🏔️</span> OUR VALLEY</a></li>
+                <li><a href="#media"><span class="nav-icon">📰</span> MEDIA</a></li>
                 <li><a href="#get-involved"><span class="nav-icon">✉️</span> GET INVOLVED</a></li>
             </ul>
         </div>
@@ -702,7 +1208,163 @@
             </p>
         </div>
     </section>
-    
+
+    <!-- Media Section -->
+    <section id="media">
+        <h2>MEDIA</h2>
+        <div class="media-grid">
+            <!-- CARD 1: Summit Daily News -->
+            <div class="media-card">
+                <img src="images/summit-daily-1.webp" alt="Screenshot of Summit Daily article: Summer tourism slipping" loading="lazy" />
+                <div class="media-caption">
+                    <h3 class="media-title"><a href="https://www.summitdaily.com/news/colorado-summer-tourism-slips-mountain-towns-expensive/" target="_blank">Summer tourism to Colorado slips as mountain resort destinations get more expensive</a></h3>
+                    <div class="media-date">June 24, 2025 | Summit Daily</div>
+                    <ul class="media-findings">
+                        <li>Occupancy down 15.1% in May 2025 vs. prior year.</li>
+                        <li>Booking streak down 6 months—the longest since COVID-19.</li>
+                        <li>“Consumers are more price-sensitive than the peak inflation surges.”</li>
+                    </ul>
+                    <div class="media-critical-quote">“... undeniable impact that rate is having on bookings... Every time daily rates rise, the booking pace declines.”</div>
+                    <div class="media-actions">
+                        <a class="btn-secondary" href="https://www.summitdaily.com/news/colorado-summer-tourism-slips-mountain-towns-expensive/" target="_blank">Read more</a>
+                    </div>
+                </div>
+            </div>
+            <!-- CARD 2: Colorado Sun -->
+            <div class="media-card">
+                <img src="images/colorado-sun-2.webp" alt="Screenshot of Colorado Sun: summer slump" loading="lazy" />
+                <div class="media-caption">
+                    <h3 class="media-title"><a href="https://coloradosun.com/2025/08/04/colorado-mountain-summer-tourism/" target="_blank">Summer slump in mountain-town visitors worries tourism officials</a></h3>
+                    <div class="media-date">August 4, 2025 | Colorado Sun</div>
+                    <ul class="media-findings">
+                        <li>Hotel occupancy DOWN 2% statewide through June 2025.</li>
+                        <li>Short-term rental bookings DOWN 10% in Q1 2025.</li>
+                        <li>18 mountain towns saw $2 million less in taxable sales.</li>
+                    </ul>
+                    <div class="media-critical-quote">“Our market share compared to the rest of the country continues to decline.”</div>
+                    <div class="media-actions">
+                        <a class="btn-secondary" href="https://coloradosun.com/2025/08/04/colorado-mountain-summer-tourism/" target="_blank">Read more</a>
+                    </div>
+                </div>
+            </div>
+            <!-- CARD 3: KUNC Radio -->
+            <div class="media-card">
+                <img src="images/kunc-3.webp" alt="Screenshot of KUNC: Breckenridge bookings" loading="lazy" />
+                <div class="media-caption">
+                    <h3 class="media-title"><a href="https://www.kunc.org/news/2025-05-05/breckenridge-tourism-office-says-summer-bookings-are-currently-down-16-and-consumer-confidence-continues-to-drop" target="_blank">Breckenridge Tourism Office says summer bookings are currently down 16%...</a></h3>
+                    <div class="media-date">May 5, 2025 | KUNC/CPR</div>
+                    <ul class="media-findings">
+                        <li>Breckenridge summer bookings: DOWN 16%.</li>
+                        <li>Consumer confidence index: 87.7 (pandemic-era low).</li>
+                        <li>6-month economic outlook expected to drop to 2011 recession levels.</li>
+                    </ul>
+                    <div class="media-critical-quote">“We think there’s going to be a recession coming soon. So that’s pretty concerning.”</div>
+                    <div class="media-actions">
+                        <a class="btn-secondary" href="https://www.kunc.org/news/2025-05-05/breckenridge-tourism-office-says-summer-bookings-are-currently-down-16-and-consumer-confidence-continues-to-drop" target="_blank">Read more</a>
+                    </div>
+                </div>
+            </div>
+            <!-- CARD 4: Colorado Public Radio -->
+            <div class="media-card">
+                <img src="images/cpr-4.webp" alt="Screenshot of CPR: Colorado tourist spending" loading="lazy" />
+                <div class="media-caption">
+                    <h3 class="media-title"><a href="https://www.cpr.org/2025/06/27/trump-colorado-tourism-impacts/" target="_blank">Amid Trump shifts, Colorado tourist communities keeping a close eye on tourism spending</a></h3>
+                    <div class="media-date">June 27, 2025 | Colorado Public Radio</div>
+                    <ul class="media-findings">
+                        <li>Lodging tax revenues down 7% in Mar/Apr 2025 vs. 2024.</li>
+                        <li>Bookings fluctuate with political headlines.</li>
+                        <li>Overseas travel declining.</li>
+                    </ul>
+                    <div class="media-critical-quote">“It’s a little bit of a rollercoaster. We usually don’t see that type of fluctuation.”</div>
+                    <div class="media-actions">
+                        <a class="btn-secondary" href="https://www.cpr.org/2025/06/27/trump-colorado-tourism-impacts/" target="_blank">Read more</a>
+                    </div>
+                </div>
+            </div>
+            <!-- CARD 5: Aspen Times -->
+            <div class="media-card">
+                <img src="images/aspen-5.webp" alt="Screenshot of Aspen Times: Price sensitivity" loading="lazy" />
+                <div class="media-caption">
+                    <h3 class="media-title"><a href="https://www.aspentimes.com/news/colorado-summer-tourism-mountain-towns-get-more-expensive/" target="_blank">Summer tourism to Colorado slips as mountain resort destinations get more expensive</a></h3>
+                    <div class="media-date">June 22, 2025 | Aspen Times</div>
+                    <ul class="media-findings">
+                        <li>Economy (≤$250/night) is the ONLY segment showing occupancy gains.</li>
+                        <li>Luxury properties see occupancy drop even with higher rates.</li>
+                    </ul>
+                    <div class="media-critical-quote">“Budget travelers are the most active segment—but also most price sensitive.”</div>
+                    <div class="media-actions">
+                        <a class="btn-secondary" href="https://www.aspentimes.com/news/colorado-summer-tourism-mountain-towns-get-more-expensive/" target="_blank">Read more</a>
+                    </div>
+                </div>
+            </div>
+            <!-- CARD 6: True State Sentry Colorado -->
+            <div class="media-card">
+                <img src="images/tss-6.webp" alt="Sentry Colorado: Lodging tax increases" loading="lazy" />
+                <div class="media-caption">
+                    <h3 class="media-title"><a href="https://tsscolorado.com/tourist-drawing-counties-seeking-big-boosts-to-lodging-taxes/" target="_blank">Tourist-drawing counties seeking big boosts to lodging taxes</a></h3>
+                    <div class="media-date">September 17, 2025 | True State Sentry CO</div>
+                    <ul class="media-findings">
+                        <li>6+ counties seeking to triple lodging taxes in 2025.</li>
+                        <li>Industry pushback: "very significant jump."</li>
+                        <li>New state law enabled the increases.</li>
+                    </ul>
+                    <div class="media-critical-quote">"It seems unfair that... is on the shoulders of the lodging industry."</div>
+                    <div class="media-actions">
+                        <a class="btn-secondary" href="https://tsscolorado.com/tourist-drawing-counties-seeking-big-boosts-to-lodging-taxes/" target="_blank">Read more</a>
+                    </div>
+                </div>
+            </div>
+            <!-- CARD 7: RCBN 47 Podcast (Featured Video) -->
+            <div class="media-card featured">
+                <div class="video-thumbnail">
+                    <img src="images/rcbn-featured.webp" alt="RCBN 47 Podcast thumbnail" loading="lazy" />
+                    <a href="https://www.youtube.com/watch?v=clnMK9hwlXI" target="_blank" class="video-play-overlay" aria-label="Play video"></a>
+                </div>
+                <div class="media-caption">
+                    <h3 class="media-title"><a href="https://www.youtube.com/watch?v=clnMK9hwlXI" target="_blank">RCBN 47 – Lodging Tax Update & Local Issues with Charley Ellison</a></h3>
+                    <div class="media-date">October 9, 2025 | RCBN Podcast</div>
+                    <ul class="media-findings">
+                        <li>In-depth discussion of Custer County's lodging tax proposal</li>
+                        <li>Expert analysis from local community leaders</li>
+                        <li>Economic impact data specific to Custer County</li>
+                    </ul>
+                    <div class="media-critical-quote">"Tourism produces $45 million of economic impact. The multiplier for rural counties is 5.7—every $1,000 spent on lodging means $5,700 spent elsewhere."</div>
+                    <div class="media-actions">
+                        <a class="btn-secondary" href="https://www.youtube.com/watch?v=clnMK9hwlXI" target="_blank">Watch on YouTube</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Media Conclusion -->
+        <div class="media-conclusion">
+            <h3>The Evidence Is Clear</h3>
+            <div class="media-conclusion-content">
+                <p><strong>Colorado's tourism industry is facing unprecedented challenges:</strong></p>
+                <ul class="declining">
+                    <li>Statewide hotel occupancy is down</li>
+                    <li>Short-term rental bookings have declined 10%</li>
+                    <li>Consumer confidence is at pandemic-era lows</li>
+                    <li>Visitors are becoming increasingly price-sensitive</li>
+                    <li>Every price increase drives bookings down further</li>
+                </ul>
+
+                <span class="highlight">This is not the time to raise prices on tourists.</span>
+
+                <p><strong>Custer County can choose a different path:</strong></p>
+                <ul class="opportunity">
+                    <li>Position ourselves as the affordable, welcoming destination</li>
+                    <li>Attract budget-conscious families who can still afford to vacation here</li>
+                    <li>Gain competitive advantage while other counties raise prices</li>
+                    <li>Protect local jobs and small businesses that depend on tourism</li>
+                    <li>Keep our economy strong and sustainable</li>
+                </ul>
+
+                <p style="font-size: 1.25em; font-weight: 600; margin-top: 30px;"><strong>Vote NO on Question 1A</strong> to protect our local economy and keep Custer County affordable for everyone.</p>
+            </div>
+        </div>
+    </section>
+
     <!-- Get Involved Section -->
     <section id="get-involved" class="cta">
         <h2>GET INVOLVED</h2>
@@ -831,15 +1493,15 @@
             const container = document.getElementById('video-container');
             const facade = document.getElementById('video-facade');
             const playButton = document.getElementById('play-button');
-            
+
             // Create iframe
             const iframe = document.createElement('iframe');
             iframe.src = 'https://geo.dailymotion.com/player.html?video=x9ru0e8';
-            iframe.style.cssText = 'width:100%; height:100%; position:absolute; left:0px; top:0px; overflow:hidden; border:none;';
+            iframe.style.cssText = 'width:100%; height:100%; position:absolute; left:0; top:0; border:none;';
             iframe.allowFullscreen = true;
             iframe.title = 'Dailymotion Video Player';
             iframe.allow = 'web-share';
-            
+
             // Replace facade with iframe
             container.innerHTML = '';
             container.appendChild(iframe);
@@ -902,6 +1564,69 @@
             employmentSelect.addEventListener('change', updateEmployerVisibility);
             updateEmployerVisibility();
         });
+
+        // Smooth scrolling for all anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href').substring(1);
+                const targetElement = document.getElementById(targetId);
+                if (targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Scroll-triggered fade-in animations
+        document.addEventListener('DOMContentLoaded', function() {
+            // Intersection Observer for scroll animations
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.1
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('fade-in-visible');
+                        // Optional: stop observing after animation triggers
+                        // observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            // Observe all sections
+            document.querySelectorAll('section').forEach(section => {
+                observer.observe(section);
+            });
+
+            // Observe fact cards and gallery items with stagger
+            document.querySelectorAll('.fact-card').forEach((card, idx) => {
+                card.style.transitionDelay = `${idx * 0.1}s`;
+                observer.observe(card);
+            });
+
+            document.querySelectorAll('.gallery-item').forEach((item, idx) => {
+                item.style.transitionDelay = `${idx * 0.15}s`;
+                observer.observe(item);
+            });
+
+            // Observe economic impact box
+            document.querySelectorAll('.economic-impact').forEach(box => {
+                observer.observe(box);
+            });
+
+            // Fade-in for media cards with stagger
+            const cards = document.querySelectorAll('.media-card');
+            cards.forEach((card, idx) => {
+                setTimeout(() => card.classList.add('fade-in'), idx * 100);
+            });
+        });
     </script>
+    <!-- 100% privacy-first analytics -->
+    <script async src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
 </body>
 </html>
