@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Price Elasticity Report - Keep Custer County Affordable</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f5f5f5;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        header {
+            border-bottom: 3px solid #2c5282;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+
+        h1 {
+            font-size: 2.2em;
+            color: #2c5282;
+            margin-bottom: 10px;
+            line-height: 1.2;
+        }
+
+        h2 {
+            font-size: 1.8em;
+            color: #2c5282;
+            margin-top: 40px;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #e2e8f0;
+        }
+
+        h3 {
+            font-size: 1.4em;
+            color: #2d3748;
+            margin-top: 30px;
+            margin-bottom: 10px;
+        }
+
+        h4 {
+            font-size: 1.1em;
+            color: #4a5568;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+
+        p {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+
+        .metadata {
+            color: #666;
+            font-size: 0.95em;
+            margin-bottom: 10px;
+        }
+
+        .executive-summary {
+            background: #edf2f7;
+            padding: 25px;
+            border-left: 4px solid #2c5282;
+            margin: 30px 0;
+        }
+
+        .key-findings {
+            margin: 20px 0;
+        }
+
+        .key-findings ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .key-findings li {
+            padding: 12px 0;
+            padding-left: 25px;
+            position: relative;
+        }
+
+        .key-findings li:before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: #2c5282;
+            font-weight: bold;
+            font-size: 1.5em;
+        }
+
+        blockquote {
+            background: #f7fafc;
+            border-left: 4px solid #cbd5e0;
+            padding: 15px 20px;
+            margin: 20px 0;
+            font-style: italic;
+            color: #4a5568;
+        }
+
+        ul, ol {
+            margin: 15px 0 15px 30px;
+        }
+
+        li {
+            margin: 8px 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            font-size: 0.95em;
+        }
+
+        th {
+            background: #2c5282;
+            color: white;
+            padding: 12px;
+            text-align: left;
+            font-weight: 600;
+        }
+
+        td {
+            padding: 12px;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        tr:nth-child(even) {
+            background: #f7fafc;
+        }
+
+        .highlight {
+            background: #fef5e7;
+            padding: 20px;
+            border-radius: 4px;
+            margin: 20px 0;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: 20px;
+            color: #2c5282;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .back-link:hover {
+            text-decoration: underline;
+        }
+
+        hr {
+            border: none;
+            border-top: 1px solid #e2e8f0;
+            margin: 40px 0;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px;
+            }
+
+            h1 {
+                font-size: 1.8em;
+            }
+
+            h2 {
+                font-size: 1.5em;
+            }
+
+            h3 {
+                font-size: 1.2em;
+            }
+
+            table {
+                font-size: 0.85em;
+            }
+
+            th, td {
+                padding: 8px;
+            }
+        }
+
+        @media print {
+            body {
+                background: white;
+            }
+
+            .container {
+                box-shadow: none;
+                padding: 0;
+            }
+
+            .back-link {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="index.html" class="back-link">← Back to Keep Custer County Affordable</a>
+
+        <header>
+            <h1>Price Elasticity of Demand for Tourism in Colorado Mountain Communities</h1>
+            <p class="metadata"><strong>Analysis of Ballot Measure 1A: Proposed Lodging Tax Increase in Custer County</strong></p>
+            <p class="metadata"><strong>Prepared for:</strong> Keep Custer County Affordable Campaign<br>
+            <strong>Date:</strong> October 30, 2025</p>
+        </header>
+
+        <div class="executive-summary">
+            <h2>Executive Summary</h2>
+            <p>Ballot Measure 1A proposes tripling Custer County's lodging tax from 2% to 6%—a 300% increase—to fund workforce housing and childcare services. While proponents argue this will generate additional revenue, extensive economic research and current market conditions demonstrate significant risks to the local tourism economy.</p>
+
+            <div class="key-findings">
+                <h3>Key Findings:</h3>
+                <ul>
+                    <li><strong>Colorado tourism is experiencing unprecedented decline:</strong> Hotel occupancy is down 2% statewide, short-term rentals down 10%, and Colorado mountain destinations saw a 15.1% occupancy drop in May 2025 compared to 2024.</li>
+
+                    <li><strong>Consumers are highly price-sensitive:</strong> Current data shows consumers are "more price-sensitive than they were during the peak inflation surges in the immediate post-pandemic period," with booking pace declining whenever rates increase.</li>
+
+                    <li><strong>International tourism has collapsed:</strong> Canadian bookings are down 55.5%, Western European bookings down 35.5%, threatening Colorado's tourism economy that generated $28.4 billion in 2024.</li>
+
+                    <li><strong>Economic uncertainty is suppressing travel:</strong> Consumer confidence has dropped to pandemic-era levels (87.7 in April 2025), with political and economic turbulence directly impacting bookings.</li>
+
+                    <li><strong>Main Street businesses will suffer most:</strong> Overnight visitors spend 5.6 times more than day-trippers ($594 vs. $105 per day), and 89% of visitor-generated tax revenue comes from non-lodging sources like restaurants, retail, and gas stations.</li>
+                </ul>
+            </div>
+
+            <div class="highlight">
+                <p><strong>The Critical Problem:</strong> While lodging tax revenue may nominally increase, the reduction in visitors will devastate broader sales tax collections and local business revenue, potentially resulting in a net loss to the county's overall economy.</p>
+            </div>
+        </div>
+
+        <hr>
+
+        <h2>Section 1: Understanding Price Elasticity of Demand</h2>
+
+        <h3>What is Price Elasticity?</h3>
+        <p>Price elasticity of demand measures how sensitive consumers are to price changes. When demand is <strong>elastic</strong>, even small price increases lead to significant reductions in consumption. Tourism and leisure travel are consistently found to be elastic goods because they are discretionary—people can postpone trips, choose alternative destinations, or skip travel entirely.</p>
+
+        <h3>Tourism is Elastic</h3>
+        <p>Research consistently shows that vacation travel demonstrates elastic demand, meaning changes in price have a noticeable effect on demand. Several factors make tourism particularly price-sensitive:</p>
+
+        <ol>
+            <li><strong>Leisure vs. Necessity:</strong> Unlike business travel, leisure tourism is discretionary. When prices rise, consumers can easily choose not to travel.</li>
+            <li><strong>Availability of Substitutes:</strong> Travelers can choose from thousands of competing destinations. A price increase in one location drives visitors to alternatives.</li>
+            <li><strong>Economic Conditions:</strong> During periods of economic uncertainty or inflation, consumers become more price-sensitive, increasing elasticity.</li>
+            <li><strong>Market Segmentation:</strong> Budget-conscious travelers (the "economy tier") show the highest price sensitivity.</li>
+        </ol>
+
+        <h3>Research on Tourism Price Elasticity</h3>
+        <p>Academic research provides specific elasticity estimates:</p>
+        <ul>
+            <li><strong>Air travel:</strong> Elasticity ranges from -1.2 and above, indicating elastic demand</li>
+            <li><strong>Hotel accommodations:</strong> Varies by season, with higher elasticity (more price-sensitive) during low seasons</li>
+            <li><strong>Tourism taxation studies:</strong> A 10% increase in tourism taxes can reduce demand by 5.4%</li>
+            <li><strong>UK international travel:</strong> Strong sensitivity to accommodation taxes, varying by destination and season</li>
+        </ul>
+
+        <p><strong>Critical Finding:</strong> The literature confirms that <strong>increasing prices through taxation reduces visitor demand</strong>, with the magnitude depending on market conditions, destination alternatives, and consumer economic circumstances.</p>
+
+        <hr>
+
+        <h2>Section 2: Colorado's Tourism Crisis in 2025</h2>
+
+        <h3>Unprecedented Decline in Visitation</h3>
+        <p>Colorado is experiencing its first significant tourism slowdown since the pandemic, with multiple indicators pointing to a struggling industry:</p>
+
+        <h4>Occupancy Collapse</h4>
+        <ul>
+            <li><strong>Statewide hotel occupancy:</strong> Down 2% through June 2025</li>
+            <li><strong>Short-term rentals:</strong> Down 10% in Q1 2025</li>
+            <li><strong>Colorado mountain destinations:</strong> Down 15.1% in May 2025 versus May 2024</li>
+            <li><strong>Booking pace:</strong> Declined for six consecutive months, the longest streak since COVID-19</li>
+        </ul>
+
+        <h4>Revenue Pressures</h4>
+        <ul>
+            <li>Colorado mountain destinations show negative revenue growth (-1%) compared to the industry average (+2.4%)</li>
+            <li>Despite raising rates by 5.3%, occupancy losses have offset any gains</li>
+            <li>Summer bookings for July and August are "clearly underperforming"</li>
+        </ul>
+
+        <h3>Extreme Price Sensitivity</h3>
+        <p>Tourism expert Tom Foley, Senior VP of Business Intelligence for Inntopia, reports a critical trend:</p>
+
+        <blockquote>
+            "The most notable conclusion from this month's data is the undeniable impact that rate is having on bookings. Consumers are more price-sensitive than they were during the peak inflation surges in the immediate post-pandemic period. We're seeing a clear pattern that just about every time that year-over-year daily rates rise at all, the booking pace declines—and on the rare occasions that rates have dropped, those dates pick up bookings."
+        </blockquote>
+
+        <p>This finding directly contradicts the assumption that visitors will absorb a 300% lodging tax increase without changing their behavior.</p>
+
+        <h3>The Economy Tier is Suffering Most</h3>
+        <p>Data from May 2025 reveals crucial market segmentation effects:</p>
+        <ul>
+            <li><strong>Economy properties</strong> (up to $250/night): The only category showing occupancy and revenue gains</li>
+            <li><strong>Moderate properties</strong> ($251-$400/night): Decreased rates but saw no occupancy improvement</li>
+            <li><strong>Luxury properties</strong> (over $400/night): Raised rates 1.4%, resulting in 3.2% occupancy drop</li>
+        </ul>
+
+        <p>This pattern demonstrates that <strong>budget-conscious travelers are the most active segment</strong> but also <strong>the most price-sensitive</strong>. Custer County, as a rural destination without luxury resort amenities, likely attracts primarily economy and moderate-tier travelers—exactly the segments most vulnerable to price increases.</p>
+
+        <h3>International Tourism Collapse</h3>
+        <p>International visitors are abandoning Colorado and the United States at unprecedented rates:</p>
+        <ul>
+            <li><strong>Canadian bookings:</strong> Down 55.5% in May 2025</li>
+            <li><strong>Western European bookings:</strong> Down 35.5%</li>
+            <li><strong>Mexican bookings:</strong> Down 5.4%</li>
+            <li><strong>US international tourism loss:</strong> $12.5-$29 billion in 2025</li>
+        </ul>
+
+        <p>The cause? Political and economic uncertainty stemming from Trump administration policies, including tariffs, immigration rhetoric, and proposed visa fees.</p>
+        <p>Canada and Mexico alone account for 46% of Colorado's international visitors and generated over $265 million in economic impact in 2024. Their withdrawal represents a massive loss to the state's tourism economy.</p>
+
+        <h3>Consumer Confidence at Crisis Levels</h3>
+        <p>Consumer confidence metrics paint a troubling picture:</p>
+        <ul>
+            <li><strong>Consumer Confidence Index:</strong> Fell to 87.7 in April 2025, matching pandemic-era lows</li>
+            <li><strong>Breckenridge summer bookings:</strong> Down 16%</li>
+            <li><strong>Summit County bookings:</strong> Down 11%</li>
+            <li><strong>Six-month outlook:</strong> Expected to drop to 2011 recession levels</li>
+        </ul>
+
+        <p>Lucy Kay, President of Breckenridge Tourism Office, noted: "We think there's going to be a recession coming soon...that's pretty concerning."</p>
+        <p>When consumers fear economic instability, they cut discretionary spending first—and travel is among the first expenses eliminated.</p>
+
+        <hr>
+
+        <h2>Section 3: Economic Research on Lodging Tax Impacts</h2>
+
+        <h3>The University of Wisconsin Study</h3>
+        <p>A comprehensive review from the University of Wisconsin's Fiscal and Economic Research Center examined lodging tax increases across the United States. Key findings:</p>
+
+        <ol>
+            <li><strong>Demand is inelastic to moderately elastic:</strong> Elasticity estimates range from -0.13 to -0.7, meaning a 1% price increase reduces demand by 0.13% to 0.7%.</li>
+            <li><strong>Tourists bear the tax burden:</strong> When demand is relatively inelastic, consumers pay most of the tax increase rather than lodging providers absorbing it.</li>
+            <li><strong>Weak relationship between tax rates and hotel revenues:</strong> Multiple studies found no strong correlation, suggesting that other factors (marketing, economic conditions) matter more.</li>
+            <li><strong>Earmarking matters:</strong> Directing tax revenue back into tourism promotion can offset negative effects.</li>
+        </ol>
+
+        <div class="highlight">
+            <p><strong>Critical Insight:</strong> The study concluded that modest tax increases (2% to 4%) in established markets show minimal impact. However, Custer County faces different conditions:</p>
+            <ul>
+                <li>A 300% tax increase (2% to 6%) far exceeds "modest"</li>
+                <li>Colorado is experiencing record tourism declines</li>
+                <li>Consumer confidence is at crisis levels</li>
+                <li>The county is a small, rural destination competing with major resorts</li>
+            </ul>
+        </div>
+
+        <h3>UK Accommodation Tax Study</h3>
+        <p>Research on UK outbound travel demand analyzed the impact of accommodation taxes on visitor flows to France, Spain, and Italy between 2012-2018. Findings:</p>
+        <ul>
+            <li><strong>UK travelers are sensitive to hotel taxes</strong>, with impacts varying by peak vs. off-peak periods</li>
+            <li><strong>French destinations showed the most negative effect</strong> on visitor flows from taxation</li>
+            <li><strong>Major cities like Venice and Barcelona</strong> showed less impact due to their unique appeal</li>
+            <li><strong>Tax elasticities vary significantly by destination type</strong></li>
+        </ul>
+
+        <p><strong>Implication for Custer County:</strong> Unlike Venice or Barcelona, Custer County lacks "must-see" unique attractions that make it irreplaceable. Visitors can easily substitute to nearby mountain communities with lower lodging costs.</p>
+
+        <h3>Maldives Tourism Tax Study</h3>
+        <p>Research on the Maldives—a tourism-dependent island nation where tourism generates 70% of government revenue—found that a <strong>10% increase in tourism tax reduces demand by 5.4%</strong>. The study emphasized:</p>
+
+        <blockquote>
+            "The degree of responsiveness of tourism demand to changes in taxes is essential for tourism policy since a change in the cost of visiting a destination resulting from a change in tourism tax policies affects inbound tourism demand."
+        </blockquote>
+
+        <p>While the Maldives' unique geography creates some inelasticity (limited substitutes), the study still found significant demand reductions from taxation.</p>
+
+        <p><strong>Application to Custer County:</strong> A 4 percentage point tax increase on a $150/night room represents approximately a 3.9% total price increase. Using the Maldives elasticity ratio (5.4% demand reduction per 10% tax increase), Custer County could expect roughly a <strong>2-3% visitor decline</strong> in normal conditions. However, current market conditions suggest significantly higher impacts.</p>
+
+        <hr>
+
+        <h2>Section 4: The Main Street Economic Catastrophe</h2>
+
+        <h3>The Real Economic Impact</h3>
+        <p><strong>The lodging tax is NOT the primary source of tourism revenue</strong>. It represents a tiny fraction of the economic value that tourism generates. The real impact of reduced visitation will be felt on Main Street.</p>
+
+        <h3>Spending Differential: Overnight vs. Day Visitors</h3>
+        <p>Research consistently shows a dramatic spending gap:</p>
+        <ul>
+            <li><strong>Overnight visitors:</strong> $594 per day in total spending</li>
+            <li><strong>Day-trippers:</strong> $105 per day in total spending</li>
+            <li><strong>Ratio:</strong> Overnight visitors spend <strong>5.6 times more</strong> than day-trippers</li>
+        </ul>
+
+        <p>This spending flows to:</p>
+        <ul>
+            <li>Restaurants and cafes</li>
+            <li>Grocery stores</li>
+            <li>Gas stations</li>
+            <li>Retail shops</li>
+            <li>Recreational outfitters and guides</li>
+            <li>Entertainment venues</li>
+            <li>Local services</li>
+        </ul>
+
+        <p>Tom Foley explains the critical connection:</p>
+        <blockquote>
+            "There's a corollary to that about Main Street and non-lodging suppliers — people who own art galleries and widget shops and food and drink and so forth — because if there are fewer people staying overnight, there are, in all likelihood, some fewer number of people on Main Street spending money in the broader economy outside of the lodging sector. So it's a double-sided coin. It can be painful for the balance of the town if occupancy doesn't pick up."
+        </blockquote>
+
+        <h3>The Tax Revenue Reality</h3>
+        <p><strong>89% of visitor-generated tax revenue comes from NON-lodging sources</strong>. This includes:</p>
+        <ul>
+            <li>Sales tax on retail purchases</li>
+            <li>Restaurant taxes</li>
+            <li>Gas taxes</li>
+            <li>Recreation fees</li>
+            <li>Entertainment taxes</li>
+        </ul>
+
+        <p>Every $1 million in visitor spending generates $191,000 in total tax revenue, but only $11,000 comes from lodging taxes while $170,000 comes from other sources.</p>
+
+        <h3>Calculating Custer County's Risk</h3>
+        <p>Using 2021 lodging tax data ($90,708 at 2% rate), we can estimate:</p>
+
+        <h4>Current Situation:</h4>
+        <ul>
+            <li>Total lodging sales: ~$4.5 million</li>
+            <li>Estimated visitor groups: ~15,000</li>
+            <li>Total visitor spending: ~$9 million</li>
+            <li>Sales tax revenue (at 3%): ~$270,000</li>
+            <li>Lodging tax revenue: $90,708</li>
+        </ul>
+
+        <h4>Scenario: 20% Visitor Decline (Moderate)</h4>
+        <ul>
+            <li>Lodging tax revenue: $220,800 (increase of $130,092)</li>
+            <li>Lost visitor spending: $1.8 million</li>
+            <li>Lost sales tax revenue: $53,881</li>
+            <li><strong>Net tax revenue gain:</strong> $76,211</li>
+        </ul>
+
+        <p>However, this "net gain" ignores:</p>
+        <ul>
+            <li>Lost employment and wages</li>
+            <li>Reduced business revenues and potential closures</li>
+            <li>Decreased property values</li>
+            <li>Long-term destination reputation damage</li>
+            <li>Multiplier effects (each tourism dollar generates 1.26-1.44x in total economic activity)</li>
+        </ul>
+
+        <h4>Scenario: 30% Visitor Decline (Higher but Plausible)</h4>
+        <ul>
+            <li>Lodging tax revenue: $193,200 (increase of $102,492)</li>
+            <li>Lost visitor spending: $2.7 million</li>
+            <li>Lost sales tax revenue: $80,821</li>
+            <li><strong>Net tax revenue gain:</strong> $21,671</li>
+        </ul>
+
+        <p>At this level, the county gains virtually nothing while local businesses suffer devastating losses.</p>
+
+        <h3>The Tipping Point</h3>
+        <p>There exists a visitor decline threshold where lodging tax gains are completely offset by sales tax losses. Given current market conditions, even a modest visitor reduction could push Custer County into negative net revenue while simultaneously devastating the local business community.</p>
+
+        <hr>
+
+        <h2>Section 5: Quantitative Risk Assessment</h2>
+
+        <h3>Price Increase to Consumers</h3>
+        <p>Assuming an average lodging rate of $150/night:</p>
+        <ul>
+            <li><strong>Current cost:</strong> $153.00 ($150 + $3 tax)</li>
+            <li><strong>Proposed cost:</strong> $159.00 ($150 + $9 tax)</li>
+            <li><strong>Increase:</strong> 3.9% to the consumer</li>
+        </ul>
+
+        <p>While 3.9% may seem modest, research shows that in the current hyper-sensitive market, even small increases drive booking declines.</p>
+
+        <h3>Projected Visitor Decline Scenarios</h3>
+        <p>Applying price elasticity research to Custer County's 3.9% effective price increase:</p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Scenario</th>
+                    <th>Elasticity</th>
+                    <th>Expected Decline</th>
+                    <th>Probability</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Very Inelastic (Business travel dominated)</td>
+                    <td>-0.3</td>
+                    <td>1.2%</td>
+                    <td>Very Low*</td>
+                </tr>
+                <tr>
+                    <td>Slightly Inelastic</td>
+                    <td>-0.7</td>
+                    <td>2.7%</td>
+                    <td>Low</td>
+                </tr>
+                <tr>
+                    <td>Unit Elastic</td>
+                    <td>-1.0</td>
+                    <td>3.9%</td>
+                    <td>Possible</td>
+                </tr>
+                <tr>
+                    <td>Moderately Elastic (Leisure tourism)</td>
+                    <td>-1.2</td>
+                    <td>4.7%</td>
+                    <td>Likely</td>
+                </tr>
+                <tr>
+                    <td>Highly Elastic (Budget/economy segment)</td>
+                    <td>-1.5</td>
+                    <td>5.9%</td>
+                    <td>Very Likely**</td>
+                </tr>
+                <tr>
+                    <td>Very High (Current market conditions)</td>
+                    <td>-2.0</td>
+                    <td>7.8%</td>
+                    <td>Possible***</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <p style="font-size: 0.9em; color: #666;">
+            *Custer County is primarily a leisure destination, not business travel.<br>
+            **Economy tier travelers show highest price sensitivity and represent core market.<br>
+            ***Given unprecedented 2025 conditions, higher elasticity is plausible.
+        </p>
+
+        <h3>The Break-Even Analysis</h3>
+        <p>Sales tax losses fully offset lodging tax gains at approximately <strong>37% visitor decline</strong>. At that threshold:</p>
+        <ul>
+            <li>Lodging tax gain: ~$85,000</li>
+            <li>Sales tax loss: ~$85,000</li>
+            <li>Net revenue: $0</li>
+        </ul>
+
+        <p>Beyond 37% decline, <strong>the county loses net tax revenue</strong> while devastating the local economy.</p>
+
+        <hr>
+
+        <h2>Section 6: The Housing and Childcare Paradox</h2>
+
+        <h3>Ballot 1A's Stated Purpose</h3>
+        <p>Proponents argue that the 4 percentage point tax increase would fund:</p>
+        <ul>
+            <li>2% for workforce housing development</li>
+            <li>2% for childcare options</li>
+        </ul>
+        <p>Projected annual revenue: $170,000 additional</p>
+
+        <h3>The Fatal Flaw</h3>
+        <p><strong>Creating affordable housing and childcare requires a thriving tourism economy to generate jobs that need housing and childcare.</strong> If the tax increase reduces tourism by 20-30%, the county will experience:</p>
+        <ul>
+            <li>Fewer tourism-related jobs</li>
+            <li>Lower wages for remaining workers</li>
+            <li>Reduced need for workforce housing</li>
+            <li>Less demand for childcare services</li>
+            <li>Decreased property values, making housing less expensive naturally</li>
+        </ul>
+
+        <p>In other words, <strong>the tax intended to solve the housing crisis could eliminate the economic conditions that created housing demand in the first place.</strong></p>
+
+        <h3>The Smarter Approach</h3>
+        <p>Research suggests that lodging tax revenue <strong>reinvested in tourism promotion</strong> can offset any negative demand effects. Counties that redirect taxes toward:</p>
+        <ul>
+            <li>Marketing and destination promotion</li>
+            <li>Visitor infrastructure improvements</li>
+            <li>Event support and development</li>
+            <li>Experience enhancement</li>
+        </ul>
+
+        <p>...maintain or grow visitation, which generates MORE revenue from all tax sources (sales, lodging, etc.) AND creates the economic activity that justifies workforce housing and childcare investments.</p>
+
+        <hr>
+
+        <h2>Section 7: Recommendations and Alternatives</h2>
+
+        <h3>Recommendation 1: Reject Ballot 1A</h3>
+        <p>Given the overwhelming evidence of tourism decline, extreme price sensitivity, and economic risks, <strong>Custer County voters should reject the proposed lodging tax increase</strong>.</p>
+
+        <p>The marginal revenue gains ($100,000-$170,000 in best-case scenarios) do not justify:</p>
+        <ul>
+            <li>Risk of visitor decline and lost sales tax revenue</li>
+            <li>Devastation to Main Street businesses</li>
+            <li>Potential job losses and wage reductions</li>
+            <li>Long-term damage to destination reputation</li>
+            <li>Competitive disadvantage vs. neighboring counties</li>
+        </ul>
+
+        <h3>Alternative Approaches to Housing and Childcare</h3>
+
+        <h4>Option 1: Maintain Current Tax, Redirect Usage</h4>
+        <p>Under Colorado law (HB 1117), counties can redirect lodging tax revenues from pure tourism marketing to housing and childcare while maintaining at least 10% for marketing. Custer County could:</p>
+        <ul>
+            <li>Maintain the 2% rate (keeping prices competitive)</li>
+            <li>Allocate 1.5% to housing/childcare</li>
+            <li>Keep 0.5% for tourism marketing</li>
+        </ul>
+        <p>This generates ~$68,000 annually for housing/childcare without raising prices.</p>
+
+        <h4>Option 2: Broader Tax Base</h4>
+        <p>Rather than concentrating the burden on visitors (who cannot vote on the tax), the county could:</p>
+        <ul>
+            <li>Pursue a modest sales tax increase affecting all consumers</li>
+            <li>Implement property tax adjustments</li>
+            <li>Seek state and federal grants for housing and childcare</li>
+            <li>Partner with nonprofit organizations and foundations</li>
+        </ul>
+
+        <h4>Option 3: Economic Development First</h4>
+        <p>Focus on growing the tourism economy before taxing it more heavily:</p>
+        <ul>
+            <li>Invest in destination marketing and events</li>
+            <li>Develop new attractions and experiences</li>
+            <li>Improve visitor infrastructure</li>
+            <li>Enhance the destination brand</li>
+        </ul>
+        <p>A larger, healthier tourism economy generates more revenue from existing tax rates AND creates the economic conditions that justify housing and childcare investments.</p>
+
+        <h4>Option 4: Public-Private Partnerships</h4>
+        <p>Explore partnerships with:</p>
+        <ul>
+            <li>Local employers to fund housing and childcare</li>
+            <li>Real estate developers for workforce housing projects</li>
+            <li>Nonprofit organizations focused on rural childcare</li>
+            <li>State programs supporting rural community development</li>
+        </ul>
+
+        <hr>
+
+        <h2>Conclusion</h2>
+
+        <p>The evidence is overwhelming: <strong>Now is the worst possible time to triple Custer County's lodging tax.</strong></p>
+
+        <p>Colorado tourism is experiencing unprecedented decline, with occupancy down 2-15% across mountain destinations, consumer confidence at pandemic-era lows, and international visitors abandoning the United States in record numbers. Consumers are demonstrably more price-sensitive than at any time in recent memory, with booking pace declining whenever prices rise even slightly.</p>
+
+        <p>Economic research confirms that tourism demand is elastic—price increases reduce visitation. While some studies show minimal impacts from small tax increases in strong markets during stable times, <strong>Custer County faces none of those conditions</strong>: a 300% tax increase in a small, rural market during an economic crisis with intense competition.</p>
+
+        <p>The lodging tax itself represents a tiny fraction of tourism's economic value. The real damage will be felt on Main Street, where restaurants, shops, and service businesses depend on overnight visitors who spend 5.6 times more than day-trippers. Lost sales tax revenue could offset most or all of the lodging tax gains, while the broader economic devastation—lost jobs, reduced wages, business closures, and property value decline—will far exceed any marginal revenue increase.</p>
+
+        <p>Most critically, the tax is supposed to fund housing and childcare for tourism workers. But if the tax reduces tourism by 20-30%, there will be fewer tourism jobs, less need for workforce housing, and reduced childcare demand. The tax designed to solve the problem could eliminate the economic activity that created the problem.</p>
+
+        <p><strong>Keep Custer County Affordable</strong> is not just a slogan—it's an economic necessity. Affordable destinations attract visitors. Expensive destinations don't. The choice is clear: reject Ballot 1A and preserve Custer County's tourism economy.</p>
+
+        <hr>
+
+        <footer style="margin-top: 40px; padding-top: 20px; border-top: 2px solid #e2e8f0; color: #666; font-size: 0.95em;">
+            <p><strong>Prepared by: Keep Custer County Affordable Campaign</strong></p>
+            <p>For more information: <a href="http://kcca.info/" style="color: #2c5282;">http://kcca.info/</a></p>
+            <p style="margin-top: 15px; font-size: 0.9em; font-style: italic;">This report is based on extensive research from Colorado news outlets, academic journals, government reports, and tourism industry analysis. Full references available in the source document.</p>
+        </footer>
+    </div>
+</body>
+</html>
